@@ -450,15 +450,15 @@ GameObject:
   - component: {fileID: 114535013}
   - component: {fileID: 114535012}
   - component: {fileID: 114535011}
-  - component: {fileID: 114535010}
   - component: {fileID: 114535016}
+  - component: {fileID: 114535010}
   m_Layer: 8
   m_Name: Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &114535010
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.27083334
 --- !u!114 &114535011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,7 +573,7 @@ SpriteRenderer:
   m_SortingLayerID: 1248679027
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b00c049dbd8024f4f82b5c3436b795cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
@@ -710,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &175440191
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.037635952, g: 0.41509432, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.003214213, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1323,7 +1323,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.037635952, g: 0.41509432, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.003214213, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1579,7 +1579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330563396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.92, y: -5.71, z: 0}
+  m_LocalPosition: {x: 1.55, y: -3.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2143060193}
@@ -1638,7 +1638,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.36985007, g: 0.20140618, b: 0.5849056, a: 1}
+  m_Color: {r: 0.36985007, g: 0.20140618, b: 0.5849056, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1851,8 +1851,8 @@ GameObject:
   - component: {fileID: 452508186}
   - component: {fileID: 452508185}
   - component: {fileID: 452508190}
-  - component: {fileID: 452508189}
   - component: {fileID: 452508191}
+  - component: {fileID: 452508189}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1940,7 +1940,7 @@ SpriteRenderer:
   m_SortingLayerID: 1248679027
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b00c049dbd8024f4f82b5c3436b795cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
@@ -1985,7 +1985,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.27083334
 --- !u!114 &452508190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2034,7 +2034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &487757544
 Transform:
   m_ObjectHideFlags: 0
@@ -2774,7 +2774,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.037635952, g: 0.41509432, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.003214213, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2962,7 +2962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &725417790
 Transform:
   m_ObjectHideFlags: 0
@@ -2991,7 +2991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 1
   maxHitPoints: 5
-  magnetic: 1
+  magnetic: 0
 --- !u!257 &725417792
 TargetJoint2D:
   m_ObjectHideFlags: 0
@@ -3141,7 +3141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &730871310
 Transform:
   m_ObjectHideFlags: 0
@@ -4070,7 +4070,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.037635952, g: 0.41509432, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.003214213, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4093,8 +4093,8 @@ GameObject:
   - component: {fileID: 1041056378}
   - component: {fileID: 1041056377}
   - component: {fileID: 1041056376}
-  - component: {fileID: 1041056375}
   - component: {fileID: 1041056374}
+  - component: {fileID: 1041056375}
   m_Layer: 8
   m_Name: Player (3)
   m_TagString: Untagged
@@ -4129,7 +4129,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.27083334
 --- !u!114 &1041056376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4228,7 +4228,7 @@ SpriteRenderer:
   m_SortingLayerID: 1248679027
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b00c049dbd8024f4f82b5c3436b795cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
@@ -4949,7 +4949,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.037635952, g: 0.41509432, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.003214213, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5301,7 +5301,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.037635952, g: 0.41509432, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.003214213, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5854,7 +5854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1625482711
 Transform:
   m_ObjectHideFlags: 0
@@ -5983,8 +5983,8 @@ GameObject:
   - component: {fileID: 1763074955}
   - component: {fileID: 1763074954}
   - component: {fileID: 1763074953}
-  - component: {fileID: 1763074952}
   - component: {fileID: 1763074951}
+  - component: {fileID: 1763074952}
   m_Layer: 8
   m_Name: Player (2)
   m_TagString: Untagged
@@ -6019,7 +6019,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.27083334
 --- !u!114 &1763074953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6118,7 +6118,7 @@ SpriteRenderer:
   m_SortingLayerID: 1248679027
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b00c049dbd8024f4f82b5c3436b795cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
@@ -6239,7 +6239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1807601653
 Transform:
   m_ObjectHideFlags: 0
@@ -6373,7 +6373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1912171919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6388,7 +6388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 1
   maxHitPoints: 1
-  magnetic: 1
+  magnetic: 0
 --- !u!61 &1912171920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6647,7 +6647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1951986262
 Transform:
   m_ObjectHideFlags: 0
@@ -9140,7 +9140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2094637153
 Transform:
   m_ObjectHideFlags: 0
@@ -9234,7 +9234,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92337b889975cb7409cb0472697a0630, type: 3}
-  m_Color: {r: 0.7647059, g: 0.4135207, b: 0.17647058, a: 0.38431373}
+  m_Color: {r: 1, g: 0.39999998, b: 0, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
