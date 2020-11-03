@@ -125,8 +125,5 @@ public class GameController : MonoBehaviour
 
         //Use layers in casting for better optimization
         controllableLayerMask = 1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Throwable");
-
-        //TODO: Doesn't work sometimes, AspectUtility.cs is good solution I heard
-        Screen.SetResolution(1920, 1080, true);
     }
 }
