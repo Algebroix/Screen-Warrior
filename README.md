@@ -8,6 +8,9 @@ Screen Warrior is Work in Progress project that has a goal of showcasing quality
 
 Screen Warrior was tested on Windows and Android and works with mouse or touchscreen.
 
+## Download
+[Latest](https://github.com/Algebroix/Screen-Warrior/releases/tag/0.1)
+
 ## Tutorial
 
 ### Movement
