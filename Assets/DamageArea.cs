@@ -13,6 +13,9 @@ public class DamageArea : MonoBehaviour
     [SerializeField]
     private float hitDuration;
 
+    [SerializeField]
+    private float cooldownDuration;
+
     private int damageAreaLayer;
     private Color hitColor;
     private Color telegraphColor;
@@ -47,7 +50,16 @@ public class DamageArea : MonoBehaviour
         Hit();
         yield return new WaitForSeconds(hitDuration);
         EndHit();
+        yield return new WaitForSeconds(cooldownDuration);
         inUse = false;
+    }
+
+    public void Cast()
+    {
+        if (!inUse)
+        {
+            StartCoroutine(Use());
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,21 +72,12 @@ public class DamageArea : MonoBehaviour
         }
     }
 
-    //TODO: remove
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Use());
-        }
-    }
-
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         damageAreaLayer = LayerMask.NameToLayer("DamageArea");
 
         hitColor = spriteRenderer.color;
-        telegraphColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.5f);
+        telegraphColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.2f);
     }
 }

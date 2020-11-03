@@ -15,17 +15,16 @@ public class Breakable : MonoBehaviour
     //Decoupled graphics for easy exchange of placeholders
     private InvulnerabilityGraphics invulnerabilityGraphics;
 
-    private bool invulnerable;
-
     //Graphic change and bool lock for getting damage for set duration.
     private IEnumerator Invulnerable()
     {
+        int originalLayer = gameObject.layer;
         invulnerabilityGraphics.SetInvulnerable();
-        invulnerable = true;
+        gameObject.layer = 0;
 
         yield return new WaitForSeconds(invulnerableDuration);
 
-        invulnerable = false;
+        gameObject.layer = originalLayer;
         invulnerabilityGraphics.SetStandard();
     }
 
@@ -40,24 +39,22 @@ public class Breakable : MonoBehaviour
 
         float power = controllable.GetPower();
         //If power of hit is non-positive or Breakable is invulnerable, don't deal damage.
-        if (!invulnerable && power > 0.0f)
-        {
-            //Decrease hp
-            hp -= power;
-            //If no hp left disable object.
-            if (hp <= 0.0f)
-            {
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                //if still alive make invulnerable for set time to avoid spamming attacks on breakable.
-                StartCoroutine(Invulnerable());
-            }
 
-            //Reset attacking object power.
-            controllable.ResetPower();
+        //Decrease hp
+        hp -= power;
+        //If no hp left disable object.
+        if (hp <= 0.0f)
+        {
+            gameObject.SetActive(false);
         }
+        else
+        {
+            //if still alive make invulnerable for set time to avoid spamming attacks on breakable.
+            StartCoroutine(Invulnerable());
+        }
+
+        //Reset attacking object power.
+        controllable.ResetPower();
     }
 
     private void Awake()

@@ -22,7 +22,7 @@ TagManager:
   - InactiveThrowable
   - ThrowRange
   - DamageArea
-  - 
+  - InvulnerablePlayer
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Low
+    uniqueID: 2763214025
     locked: 0
   - name: Mid
     uniqueID: 1552275777

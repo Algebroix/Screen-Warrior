@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour, IControllable, IDamagableByEnemie
     private int currentHp;
     private int startingHp = 5;
     public static int maxHp = 5;
+    private int playerLayer;
+    private int invulnerablePlayerLayer;
 
     private void OnSetFocus()
     {
@@ -94,7 +96,9 @@ public class PlayerController : MonoBehaviour, IControllable, IDamagableByEnemie
         invulnerable = true;
         currentPower = 0.0f;
         SetColor(invulnerableColor);
+        gameObject.layer = invulnerablePlayerLayer;
         yield return new WaitForSeconds(invulnerableDuration);
+        gameObject.layer = playerLayer;
         ResetColor();
         invulnerable = false;
     }
@@ -110,6 +114,7 @@ public class PlayerController : MonoBehaviour, IControllable, IDamagableByEnemie
         else
         {
             ResetPlayer();
+            StartCoroutine(Invulnerable());
         }
     }
 
@@ -278,5 +283,8 @@ public class PlayerController : MonoBehaviour, IControllable, IDamagableByEnemie
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerTransform = transform;
         mainCamera = Camera.main;
+
+        playerLayer = LayerMask.NameToLayer("Player");
+        invulnerablePlayerLayer = LayerMask.NameToLayer("InvulnerablePlayer");
     }
 }
