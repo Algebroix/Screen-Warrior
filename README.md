@@ -91,3 +91,53 @@ Player can also attack enemies. Attacking with low power is not effective
 Attacking with high power is more effective. Enemy is destroyed after taking enough damage. Destroying enemies give score points (Upper left corner).
 
 ![](https://media.giphy.com/media/KBvNPluVgXpis29RiW/giphy.gif)
+
+
+Yellow objects are throwables. You can grab them when they are in catching area (Transparent square around player)
+
+![](https://media.giphy.com/media/avtBJy6rqUNZQzqtCg/giphy.gif)
+
+
+Some throwables don't need to be in catch area to be controlled. They are called magnetic. Here, yellow circle is magnetic throwable:
+
+![](https://media.giphy.com/media/cCDQSKXYSMMOirOrgO/giphy.gif)
+
+
+Throwables can be thrown by releasing mouse or touch.
+
+![](https://media.giphy.com/media/ICtEVeH5vYKIkGLqHo/giphy.gif)
+
+
+Or they can be thrown by leaving catch area if not magnetic. In this clip mouse button was not released.
+
+![](https://media.giphy.com/media/pbm4ElOTs47FOUwCrV/giphy.gif)
+
+
+Player can also push throwable
+
+![](https://media.giphy.com/media/zHoSEdZzKC9ent8Vm5/giphy.gif)
+
+
+And move them using other throwables
+
+![](https://media.giphy.com/media/BOv0otNPmWyachOH9r/giphy.gif)
+
+
+Some throwables bounce, others stick
+
+![](https://media.giphy.com/media/tbtTamPMMIOsulRDfd/giphy.gif)
+
+
+Thrown objects can deal damage to all objects that player can deal damage to
+
+![](https://media.giphy.com/media/yFssIDWgi9iqWcBASi/giphy.gif)
+
+
+Some throwables slow down which makes them harder to throw far
+
+![](https://media.giphy.com/media/9j1CER1EXHQmBljOax/giphy.gif)
+
+
+Throwables can be damaged. Some have more hp than others.
+
+![](https://media.giphy.com/media/BGLG3l77keGxoEjSHt/giphy.gif)
