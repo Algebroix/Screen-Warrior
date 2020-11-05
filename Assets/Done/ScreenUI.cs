@@ -26,10 +26,12 @@ public class ScreenUI : MonoBehaviour
 
     public void UpdateScore(int change)
     {
+        //Store new score value and write it to text container
         score += change;
         scoreContainer.text = score.ToString();
     }
 
+    //Set new hp value and enable/disable hp bar images
     public void SetHp(int value)
     {
         value = Mathf.Clamp(value - 1, 0, maxHpBars);
@@ -46,6 +48,7 @@ public class ScreenUI : MonoBehaviour
         hp = value;
     }
 
+    //Set new lives value and enable/disable life bar images
     public void SetLives()
     {
         int newLives = life.GetLives() - 1;
@@ -64,10 +67,12 @@ public class ScreenUI : MonoBehaviour
 
     private void Awake()
     {
-        life = FindObjectOfType<Life>();
-        life.onLivesChanged += SetLives;
+        //Cache
         healthPoints = hpContainer.GetComponentsInChildren<Image>(true);
         lifePoints = lifeContainer.GetComponentsInChildren<Image>(true);
+        life = FindObjectOfType<Life>();
+        //Set up event that will trigger on life changes
+        life.onLivesChanged += SetLives;
         lives = lifePoints.Length;
         maxHpBars = healthPoints.Length;
     }

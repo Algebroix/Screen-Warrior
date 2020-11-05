@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreObject : MonoBehaviour
+public class DestructibleScoreObject : MonoBehaviour
 {
     [SerializeField]
     private int score;
@@ -11,11 +11,13 @@ public class ScoreObject : MonoBehaviour
 
     private void OnDisable()
     {
+        //When object is disabled, add its score to player score
         screenUI.UpdateScore(score);
     }
 
     private void Awake()
     {
+        //Cache
         screenUI = FindObjectOfType<ScreenUI>();
     }
 }

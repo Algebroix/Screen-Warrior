@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FocusTarget : MonoBehaviour, ITarget
 {
+    //Tracks previous targets to be able to set it when newer one is removed
     private List<Transform> targets = new List<Transform>();
 
     public void AddTracked(Transform tracked)
@@ -13,6 +14,7 @@ public class FocusTarget : MonoBehaviour, ITarget
 
     public Vector3 GetTarget()
     {
+        //Always shoot last target
         return targets[targets.Count - 1].position;
     }
 

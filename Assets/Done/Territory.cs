@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Simple class used to trigger territory users
 public class Territory : MonoBehaviour
 {
     private ITerritoryUser territoryUser;

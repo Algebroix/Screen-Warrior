@@ -16,56 +16,44 @@ public class DamageArea : MonoBehaviour
     [SerializeField]
     private float cooldownDuration;
 
-    private int damageAreaLayer;
-    private Color hitColor;
-    private Color telegraphColor;
+    private DamageAreaGraphics graphics;
 
-    private SpriteRenderer spriteRenderer;
+    private int damageAreaLayer;
 
     private bool inUse = false;
 
-    private void Telegraph()
-    {
-        spriteRenderer.enabled = true;
-        spriteRenderer.color = telegraphColor;
-    }
-
-    private void Hit()
-    {
-        gameObject.layer = damageAreaLayer;
-        spriteRenderer.color = hitColor;
-    }
-
-    private void EndHit()
-    {
-        gameObject.layer = 0;
-        spriteRenderer.enabled = false;
-    }
-
-    private IEnumerator Use()
-    {
-        inUse = true;
-        Telegraph();
-        yield return new WaitForSeconds(telegraphDuration);
-        Hit();
-        yield return new WaitForSeconds(hitDuration);
-        EndHit();
-        yield return new WaitForSeconds(cooldownDuration);
-        inUse = false;
-    }
-
     public void Cast()
     {
+        //If already using, don't use
         if (!inUse)
         {
             StartCoroutine(Use());
         }
     }
 
+    private IEnumerator Use()
+    {
+        //Lock using until done
+        inUse = true;
+        //Telegraph shows where the hit will land without dealing damage
+        graphics.SetTelegraph();
+        yield return new WaitForSeconds(telegraphDuration);
+        //Set layer that results in dealing damage and change graphics accordingly
+        gameObject.layer = damageAreaLayer;
+        graphics.SetHit();
+        yield return new WaitForSeconds(hitDuration);
+        //Set layer back to default to not deal damage. Change graphics
+        gameObject.layer = 0;
+        graphics.SetInactive();
+        yield return new WaitForSeconds(cooldownDuration);
+        //Unlock using again
+        inUse = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IDamagableByEnemies damagable = collision.gameObject.GetComponent<IDamagableByEnemies>();
-
+        //If object is damagable by enemies, damage it on collision
         if (damagable != null)
         {
             damagable.GetDamage(damage);
@@ -74,10 +62,8 @@ public class DamageArea : MonoBehaviour
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //Cache
+        graphics = GetComponent<DamageAreaGraphics>();
         damageAreaLayer = LayerMask.NameToLayer("DamageArea");
-
-        hitColor = spriteRenderer.color;
-        telegraphColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.2f);
     }
 }

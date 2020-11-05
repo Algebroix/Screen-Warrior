@@ -8,6 +8,7 @@ public class TerritoryCaster : MonoBehaviour, ITerritoryUser
 
     public void OnTerritoryEntered(Transform objectTransform)
     {
+        //When player entets territory cast damage area.
         damageArea.Cast();
     }
 
@@ -17,6 +18,7 @@ public class TerritoryCaster : MonoBehaviour, ITerritoryUser
 
     private void Awake()
     {
+        //Cache
         damageArea = GetComponentInChildren<DamageArea>();
     }
 }
